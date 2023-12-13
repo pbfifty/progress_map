@@ -17,8 +17,8 @@ function App() {
         setWidth(500);
         setHeight(1560);
       } else if (windowWidth < 550) {
-        setWidth(300);
-        setHeight(200);
+        setWidth(350);
+        setHeight(1800);
       } else {
         setWidth(1200);
         setHeight(650);
@@ -31,7 +31,7 @@ function App() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [width, height]);
 
   return (
     <div className="App" style={{ marginTop: "40px" }}>
