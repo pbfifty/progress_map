@@ -12,27 +12,27 @@
                 { "id": "Wood products", "parent": "Durable goods", "size": 1048.8 },
                 { "id": "Nonmetallic mineral products", "parent": "Durable goods", "size": null },
                     { "id": "Concrete manufacturing", "parent": "Nonmetallic mineral products", "size": 140 },
-                { "id": "Primary metals", "parent": "Durable goods", "size": null },
+
                 { "id": "Fabricated metal products", "parent": "Durable goods", "size": 25.44 },
                 { "id": "Machinery", "parent": "Durable goods", "size": 260.47 },
                 { "id": "Computer and electronic products", "parent": "Durable goods", "size": 17.83 },
                 { "id": "Electrical equipment, appliances, and components", "parent": "Durable goods", "size": 8.89 },
                 { "id": "Motor vehicles, bodies and trailers, and parts", "parent": "Durable goods", "size": 13.03 },
                 { "id": "Other transportation equipment", "parent": "Durable goods", "size": 22.22 },
-                { "id": "Miscellaneous manufacturing", "parent": "Durable goods", "size": null },
+
             { "id": "Nondurable goods", "parent": "Manufacturing", "size": null },
                 { "id": "Food and beverage and tobacco products", "parent": "Nondurable goods", "size": 43.54 },
                 { "id": "Paper products", "parent": "Nondurable goods", "size": 4336.17 },
-                    { "id": "More detailed NAICS code 3221", "parent": "Paper products", "size": null },
-                { "id": "Petroleum and coal products", "parent": "Nondurable goods", "size": null },
+
+
                 { "id": "Chemical products", "parent": "Nondurable goods", "size": 145.84 },
                 { "id": "Plastics and rubber products", "parent": "Nondurable goods", "size": 520.96 },
         { "id": "Wholesale trade", "parent": "Private industries", "size": 734.45 },
         { "id": "Retail trade", "parent": "Private industries", "size": null },
-            { "id": "Motor vehicle and parts dealers", "parent": "Retail trade", "size": null },
+
             { "id": "Food and beverage stores", "parent": "Retail trade", "size": 125.58 },
             { "id": "General merchandise stores", "parent": "Retail trade", "size": 85.86 },
-            { "id": "Other retail", "parent": "Retail trade", "size": null },
+
         { "id": "Transportation and warehousing", "parent": "Private industries", "size": 56.64 },
             { "id": "Air transportation", "parent": "Transportation and warehousing", "size": 51.75 },
             { "id": "Truck transportation", "parent": "Transportation and warehousing", "size": 30.28 },
@@ -40,20 +40,20 @@
             { "id": "Other transportation and support activities", "parent": "Transportation and warehousing", "size": 79.57 },
             { "id": "Warehousing and storage", "parent": "Transportation and warehousing", "size": 463.5 },
         { "id": "Information", "parent": "Private industries", "size": null },
-            { "id": "Publishing industries, except internet (includes software)", "parent": "Information", "size": null },
+
             { "id": "Motion picture and sound recording industries", "parent": "Information", "size": 11.47 },
             { "id": "Broadcasting and telecommunications", "parent": "Information", "size": 71.11 },
-            { "id": "Data processing, internet publishing, and other information services", "parent": "Information", "size": null },
+
         { "id": "Finance, insurance, real estate, rental, and leasing", "parent": "Private industries", "size": null },
             { "id": "Finance and insurance", "parent": "Finance, insurance, real estate, rental, and leasing", "size": null },
-                { "id": "Federal Reserve banks, credit intermediation, and related activities", "parent": "Finance and insurance", "size": null },
-                { "id": "Securities, commodity contracts, and investments", "parent": "Finance and insurance", "size": null },
+
+
                 { "id": "Insurance carriers and related activities", "parent": "Finance and insurance", "size": 39.15 },
-                { "id": "Funds, trusts, and other financial vehicles", "parent": "Finance and insurance", "size": null },
+
             { "id": "Real estate and rental and leasing", "parent": "Finance, insurance, real estate, rental, and leasing", "size": 294.98 },
                 { "id": "Real estate", "parent": "Real estate and rental and leasing", "size": 641.69 },
-                    { "id": "Housing", "parent": "Real estate", "size": null },
-                    { "id": "Other real estate", "parent": "Real estate", "size": null },
+
+
                 { "id": "Rental and leasing services and lessors of intangible assets", "parent": "Real estate and rental and leasing", "size": 416.83 },
         { "id": "Professional and business services", "parent": "Private industries", "size": 90.08 },
             { "id": "Professional, scientific, and technical services", "parent": "Professional and business services", "size": 73.88 },
@@ -62,7 +62,7 @@
                 { "id": "Miscellaneous professional, scientific, and technical services", "parent": "Professional, scientific, and technical services", "size": 33.64 },
             { "id": "Management of companies and enterprises", "parent": "Professional and business services", "size": 24.73 },
             { "id": "Administrative and waste management services", "parent": "Professional and business services", "size": null },
-                { "id": "Administrative and support services", "parent": "Administrative and waste management services", "size": null },
+
                 { "id": "Waste management and remediation services", "parent": "Administrative and waste management services", "size": 66.63 },
             { "id": "Educational services, health care, and social assistance", "parent": "Private industries", "size": null },
                 { "id": "Educational services", "parent": "Educational services, health care, and social assistance", "size": 107.21 },
@@ -75,9 +75,9 @@
             { "id": "Arts, entertainment, recreation, accommodation, and food services", "parent": "Private industries", "size": null },
                 { "id": "Arts, entertainment, and recreation", "parent": "Arts, entertainment, recreation, accommodation, and food services", "size": null },
                     { "id": "Performing arts, spectator sports, museums, and related activities", "parent": "Arts, entertainment, and recreation", "size": 31.9 },
-                    { "id": "Amusements, gambling, and recreation industries", "parent": "Arts, entertainment, and recreation", "size": null },
+
                 { "id": "Accommodation and food services", "parent": "Arts, entertainment, recreation, accommodation, and food services", "size": null },
-                    { "id": "Accommodation", "parent": "Accommodation and food services", "size": 750.7 },
-                    { "id": "Food services and drinking places", "parent": "Accommodation and food services", "size": null },       
-    { "id": "Other services, except government", "parent": "Private industries", "size": null  }
+                    { "id": "Accommodation", "parent": "Accommodation and food services", "size": 750.7 }
+   
+
 ]

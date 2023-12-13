@@ -1,13 +1,16 @@
 import React from "react";
 import { Text } from "@visx/text";
-import { wrap } from "@visx/text";
+import { getTooltipContent } from "./tree_utils";
 
-const AreaLabel = ({ x, y, width, height, text, i }) => { 
+const AreaLabel = ({ x, y, width, height, text, i, hierarchy, mouseEnter, mouseLeave, node, unitType }) => {
+    if (text.includes("Insurance ")){
+        // debugger
+    }
   return (
     <>
         <defs>
         <clipPath id={`clip-${i}-2`}>
-          <rect x={x} y={y-5} width={width - 10} height={height+8} />
+          <rect x={x} y={y-5} width={width - 10} height={height} />
         </clipPath>
       </defs>
       {/* <rect
@@ -21,14 +24,20 @@ const AreaLabel = ({ x, y, width, height, text, i }) => {
       /> */}
       <Text
         x={6}
-        y={y + height / 2 - 6}
-        width={width + 40}
+        y={y + 10}
+        width={width + 20}
         fontSize={10}
         fontFamily="Arial"
         textAnchor="start"
         fill="#000"
         clipPath={`url(#clip-${i}-2)`}
         verticalAnchor="start"
+        data-tooltip-id="map-tooltip"
+        data-tooltip-content={getTooltipContent(node, hierarchy, unitType)}
+        data-tooltip-place="mouse"
+        onMouseEnter={mouseEnter}
+        onMouseLeave={mouseLeave}
+        style={{ outline: "none"}}
       >
         {text}
       </Text>

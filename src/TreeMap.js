@@ -22,6 +22,8 @@ import { getTooltipContent } from "./tree_utils";
 
 const color = ['rgba(23, 190, 207, 0.8)', 'rgba(31, 119, 180, 0.8)', 'rgba(44, 160, 44, 0.8)', 'rgba(214, 39, 40, 0.8)'];
 
+const sectorColors = { "Finance, insurance, real estate, rental, and leasing": "#A8DBFF", "Manufacturing": "#C9E4FC", "Professional and business services": "#D8ECFD", "Educational services, health care, and social assistance": "#E8F4FE", "Wholesale trade": "#F7FBFF", "Retail trade": "#FBF7FF", "Construction": "#F4E6FF", "Transportation and warehousing": "#EDD4FF", "Information": "#E5C3FF", "Utilities": "#C9E4FC", "Mining": "#F7FBFF", "Arts, entertainment, recreation, accommodation, and food services": "#FFF","Other services, except government":"#FFF","Agriculture, forestry, fishing, and hunting":"#FFF"}
+
 export const color1 = '#f3e9d2';
 const color2 = '#4281a4';
 export const background = '#555';
@@ -40,9 +42,9 @@ const tileMethods = {
   treemapSliceDice,
 };
 
-const defaultMargin = { top: 10, left: 10, right: 10, bottom: 10 };
+const defaultMargin = { top: 0, left: 10, right: 10, bottom: 0 };
 
-export default function CustomTreemap({ width, height, margin = defaultMargin, hierarchyData }) {
+export default function CustomTreemap({ width, height, margin = defaultMargin, hierarchyData, unitType }) {
   const [hoveredNode, setHoveredNode] = useState(null);
 
   const data = stratify()
@@ -110,7 +112,7 @@ export default function CustomTreemap({ width, height, margin = defaultMargin, h
               <Group>
               {treemap
                 .descendants()
-                .reverse()
+                // .reverse()
                 .map((node, i) => {
                   const nodeWidth = node.x1 - node.x0;
                   const nodeHeight = node.y1 - node.y0;
@@ -127,14 +129,14 @@ export default function CustomTreemap({ width, height, margin = defaultMargin, h
                           height={nodeHeight}
                           stroke={background}
                           strokeWidth={4} // main padding stroke
-                          fill="transparent"  
+                          fill={sectorColors[node.data.id]}  
                           pointerEvents="none"/>
                       )}
                       {node.depth === 2 && (
                         <rect
                           width={nodeWidth}
                           height={nodeHeight}
-                          stroke={"#DAAAFF"}
+                          stroke={background}
                           strokeWidth={1}
                           fill="transparent"  
                           pointerEvents="none"                      
@@ -170,7 +172,7 @@ export default function CustomTreemap({ width, height, margin = defaultMargin, h
                               fill={node.depth === 1 ? "#111" : '#333'}
                               clipPath={`url(#clip-${i})`}
                               data-tooltip-id="map-tooltip"
-                              data-tooltip-content={getTooltipContent(node, hierarchyData)}
+                              data-tooltip-content={getTooltipContent(node, hierarchyData, unitType)}
                               data-tooltip-place="mouse"
                               onMouseEnter={() => setHoveredNodeAndLog(node)}
                               onMouseLeave={() => setHoveredNode(null)}
@@ -184,7 +186,7 @@ export default function CustomTreemap({ width, height, margin = defaultMargin, h
                           <>
                             <Text
                               x={7}
-                              y={8}
+                              y={8 - node.depth*1.5}
                               // dy={2 * node.depth - 1.5 + "em"}
                               width={250}
                               fontSize={12}
@@ -195,7 +197,7 @@ export default function CustomTreemap({ width, height, margin = defaultMargin, h
                               clipPath={`url(#clip-${i})`}
                               verticalAnchor='start'
                               data-tooltip-id="map-tooltip"
-                              data-tooltip-content={getTooltipContent(node, hierarchyData)}
+                              data-tooltip-content={getTooltipContent(node, hierarchyData, unitType)}
                               data-tooltip-place="mouse"
                               onMouseEnter={() => setHoveredNodeAndLog(node)}
                               onMouseLeave={() => setHoveredNode(null)}
@@ -212,10 +214,11 @@ export default function CustomTreemap({ width, height, margin = defaultMargin, h
                             height={nodeHeight}
                             text={node.data.id}
                             i={i+node.depth}
-                            hierarchy={data}
+                            hierarchy={hierarchyData}
                             mouseEnter={() => setHoveredNodeAndLog(node)}
                             mouseLeave={() => setHoveredNode(null)}
                             node={node}
+                            unitType={unitType}
                           />
                         )}                        
                     </Group>
