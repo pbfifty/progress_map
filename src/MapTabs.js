@@ -78,14 +78,15 @@ export function MapTabs({ width, height }) {
   return (
     <div>
       <div>
-        {/* Treemap Visualization */}
-        <CustomTreemap width={width} height={height} hierarchyData={getActiveData()} unitType={getUnitType()} />
-      </div>
-      <div>
         {/* Tab Headers */}
         <button className={`control-button ${activeTab === 'usEconomy' ? 'active' : ''}`} onClick={() => setActiveTab('usEconomy')}>US Economy</button>
         <button className={`control-button ${activeTab === 'vcFunding' ? 'active' : ''}`} onClick={() => setActiveTab('vcFunding')}>Dollars Invested</button>
         <button className={`control-button ${activeTab === 'competitionRatio' ? 'active' : ''}`} onClick={() => setActiveTab('competitionRatio')}>Competition Ratio</button>
+      </div>
+      
+      <div>
+        {/* Treemap Visualization */}
+        <CustomTreemap width={width} height={height} hierarchyData={getActiveData()} unitType={getUnitType()} />
       </div>
     </div>
   );
