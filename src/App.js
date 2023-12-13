@@ -18,7 +18,7 @@ function App() {
         setHeight(1560);
       } else if (windowWidth < 550) {
         setWidth(350);
-        setHeight(1800);
+        setHeight(1000);
       } else {
         setWidth(1200);
         setHeight(650);
