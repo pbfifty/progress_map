@@ -23,10 +23,10 @@ const AreaLabel = ({ x, y, width, height, text, i, hierarchy, mouseEnter, mouseL
         clipPath={`url(#clip-${i}-2)`}
       /> */}
       <Text
-        x={6}
-        y={y + 10}
+        x={6 + width / 30}
+        y={y + 5 + height / 20}
         width={width + 20}
-        fontSize={10}
+        fontSize={12}
         fontFamily="Arial"
         textAnchor="start"
         fill="#000"
