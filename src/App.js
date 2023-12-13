@@ -9,7 +9,7 @@ function App() {
 
   useEffect(() => {
     const handleResize = () => {
-      const windowWidth = window.innerWidth;
+      const windowWidth = window.innerWidth - 100;
       if (windowWidth >= 850 && windowWidth <= 1250) {
         setWidth(800);
         setHeight(975);
