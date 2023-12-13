@@ -3,9 +3,6 @@ import { Text } from "@visx/text";
 import { getTooltipContent } from "./tree_utils";
 
 const AreaLabel = ({ x, y, width, height, text, i, hierarchy, mouseEnter, mouseLeave, node, unitType }) => {
-    if (text.includes("Insurance ")){
-        // debugger
-    }
   return (
     <>
         <defs>

@@ -16,14 +16,9 @@ export function getTooltipContent(node, hierarchy, unitType) {
     const averageChildSizes = (nodeId, nodeSize) => { 
       // average all the children's sizes
       let sum = 0; 
-      let count = 0;
       const children = hierarchy.filter((item) => item.parent === nodeId);
-      for (let child of children) {
-        sum += child.size || 0;
-        count += 1;
-      }
-      if (count === 0) {
-        return node.data.id + ": " + nodeSize;
+      if (children.length === 0) {
+        return node.data.id + ": " + nodeSize.toLocaleString();
       } else {
         return node.data.id + ": Composite ratio not calculated.";
       }
