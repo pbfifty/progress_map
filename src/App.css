@@ -60,3 +60,7 @@
   color: white;
   font-weight: bold;
 }
+
+#root {
+  margin-top: -40px;
+}
