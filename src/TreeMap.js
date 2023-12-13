@@ -22,7 +22,7 @@ import { getTooltipContent } from "./tree_utils";
 
 const color = ['rgba(23, 190, 207, 0.8)', 'rgba(31, 119, 180, 0.8)', 'rgba(44, 160, 44, 0.8)', 'rgba(214, 39, 40, 0.8)'];
 
-const sectorColors = { "Finance, insurance, real estate, rental, and leasing": "#A8DBFF", "Manufacturing": "#C9E4FC", "Professional and business services": "#D8ECFD", "Educational services, health care, and social assistance": "#E8F4FE", "Wholesale trade": "#F7FBFF", "Retail trade": "#FBF7FF", "Construction": "#F4E6FF", "Transportation and warehousing": "#EDD4FF", "Information": "#E5C3FF", "Utilities": "#C9E4FC", "Mining": "#F7FBFF", "Arts, entertainment, recreation, accommodation, and food services": "#FFF","Other services, except government":"#FFF","Agriculture, forestry, fishing, and hunting":"#FFF"}
+const sectorColors = { "Finance, insurance, real estate, rental, and leasing": "#A8DBFF", "Manufacturing": "#C9E4FC", "Professional and business services": "#D8ECFD", "Educational services, health care, and social assistance": "#E8F4FE", "Wholesale trade": "#C9E4FC", "Retail trade": "#FBF7FF", "Construction": "#F4E6FF", "Transportation and warehousing": "#EDD4FF", "Information": "#E5C3FF", "Utilities": "#C9E4FC", "Mining": "#F7FBFF", "Arts, entertainment, recreation, accommodation, and food services": "#FFF","Other services, except government":"#F4E6FF","Agriculture, forestry, fishing, and hunting":"#FFF"}
 
 export const color1 = '#f3e9d2';
 const color2 = '#4281a4';
