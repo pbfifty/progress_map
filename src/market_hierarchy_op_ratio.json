@@ -22,7 +22,7 @@
 
             { "id": "Nondurable goods", "parent": "Manufacturing", "size": null },
                 { "id": "Food and beverage and tobacco products", "parent": "Nondurable goods", "size": 43.54 },
-                { "id": "Paper products", "parent": "Nondurable goods", "size": 4336.17 },
+                { "id": "Paper products", "parent": "Nondurable goods", "size": 1540 },
 
 
                 { "id": "Chemical products", "parent": "Nondurable goods", "size": 145.84 },
